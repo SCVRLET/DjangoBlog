@@ -1,0 +1,176 @@
+{% load static %}
+{% load static i18n %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/settings/styles/settings.css' %}">
+</head>
+
+<body>
+    {% include 'partial_views/navbar/html/navbar_for_logged_partial.html'%}
+    <div class="content">
+        <div class="settings-block">
+            <div id="choose-setting-container">
+                <div id="settings-variants">
+                    <div class="settings-variant" id="profile-settings-variant"
+                        onclick="changeVariant(event, 'profile-settings-variant')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                            class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                        </svg>
+                    </div>
+                    <div class="settings-variant" id="profile-security-settings-variant"
+                        onclick="changeVariant(event, 'profile-security-settings-variant')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                            class="bi bi-shield-shaded" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div id="settings-container">
+                <div id="settings-block">
+                    <div id="settings-options">
+                        <div id="profile-settings-container">
+                        <div class="settings-option" id="change-profile-name-option" onclick="changeProfileName()">
+                            <div class="settings-option-info">
+                                <div class="settings-option-descr label">
+                                    {% trans "Имя" %}
+                                </div>
+                                <div class="settings-option-descr description">
+                                    
+                                </div>
+                                <div class="settings-option-descr right-control">
+                                    <a tabindex="0" role="link">{% trans "Изменить" %}</a>
+                                </div>
+                            </div>
+
+                            <div class="settings-change-block">
+                                <div class="settings-option-info">
+                                    <div class="settings-option-descr label">
+                                        Name
+                                    </div>
+                                    <div class="settings-option-descr description">
+                                        <textarea> </textarea>
+                                    </div>
+                                    <div class="settings-option-descr right-control">
+                                        <a tabindex="0" role="link" onclick="changeBackProfileName()">Cancel</a>
+                                    </div>
+                                </div>
+                                <div class="settings-option-info">
+                                    <div class="settings-option-descr description">
+                                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <form method="POST" enctype="multipart/form-data" id="change-avatar-super-form">
+                        <input name='avatar-input'type="file" accept="image/x-png, image/png, image/gif, image/jpeg"
+                            id="change-avatar-input" hidden>
+                        </form>
+                        <div class="settings-option" id="change-avatar-option">
+                            <div class="settings-option-info" onclick="chooseAvatarImage()">
+                                <div class="settings-option-descr label">
+                                    {% trans "Аватар" %}
+                                </div>
+                                <div class="settings-option-descr description">
+
+                                </div>
+                                <div class="settings-option-descr right-control">
+                                    <a tabindex="0" role="link">{% trans "Изменить" %}</a>
+                                </div>
+                            </div>
+                            <div class="settings-change-block">
+
+                            </div>
+                        </div>
+                        <div class="settings-option">
+                            <div class="settings-option-info">
+                                <div class="settings-option-descr label">
+                                    {% trans "Изменить язык" %}
+                                </div>
+                                <form action="{% url 'set_language' %}" method="post" > {% csrf_token %}
+                                <div class="settings-option-descr description">
+                                    <div class="input-group mb-3">
+                                        <select name="language" class="custom-select" id="inputGroupSelect01">
+                                            {% get_current_language as LANGUAGE_CODE %}
+                                            {% get_available_languages as LANGUAGES %}
+                                            {% get_language_info_list for LANGUAGES as languages %}
+                                            {% for language in languages %}
+                                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                            selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                        </option>
+                                        {% endfor %}
+                                        </select>
+                                      </div>
+                                </div>
+
+                                <div class="settings-option-descr right-control">
+                                    <input type="submit" value="{% trans 'Изменить' %}">
+                                </div>
+                                </form>
+                            </div>
+                            <div class="settings-change-block">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="security-settings-container">
+                        <div class="settings-option">
+                            <div class="settings-option-info">
+                                <div class="settings-option-descr label">
+                                    {% trans "Пароль" %}
+                                </div>
+                                <div class="settings-option-descr description">
+                                    *******
+                                </div>
+                                <div class="settings-option-descr right-control">
+                                    <a tabindex="0" role="link">{% trans "Изменить" %}</a>
+                                </div>
+                            </div>
+                            <div class="settings-change-block">
+
+                            </div>
+                        </div>
+                        <div class="settings-option">
+                            <div class="settings-option-info">
+                                <div class="settings-option-descr label">
+                                    {% trans "Почта" %}
+                                </div>
+                                <div class="settings-option-descr description">
+                                    {{user.email}}
+                                </div>
+                                <div class="settings-option-descr right-control">
+                                    <a tabindex="0" role="link">{% trans "Изменить" %}</a>
+                                </div>
+                            </div>
+                            <div class="settings-change-block">
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'partial_views/base_scripts/base_scripts_partial.html'%}
+    <script src="{% static '/settings/scripts/settings.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>{% trans "Спасибо, что используете мое приложение! ;)" %}</title>
+    <link rel="stylesheet" href="{% static '/main/styles/easter_egg.css' %}">
+</head>
+
+<body>
+    <canvas id="c">
+    </canvas>
+
+    {% include 'partial_views/base_scripts/base_scripts_partial.html'%}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+    <script src="{% static '/main/scripts/easter_egg.js' %}"></script>
+</body>
+
+</html>

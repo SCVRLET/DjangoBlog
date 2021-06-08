@@ -1,0 +1,12 @@
+[
+  {
+    "model": "users.user",
+    "fields": {
+      "id": 1,
+	  "login": "localgod",
+      "sex": "m",
+      "is_admin": "True",
+      "password" : "iamgood"
+    }
+  }
+]

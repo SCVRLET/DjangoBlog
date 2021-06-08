@@ -1,0 +1,45 @@
+{% load static %}
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>{% trans "Пользователь не найден" %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<style>
+    .content {
+    min-height: 900px;
+    width: 1310px;
+    margin-left: 154px;
+    margin-right: 154px;
+    margin-top: 90px;
+    }
+
+    .error-message {
+        font-size: 60px;
+    }
+
+</style>
+
+<body>
+    {% if request.user.is_authenticated %}
+    {% include 'partial_views/navbar/html/navbar_for_logged_partial.html'%}
+    {% else %}
+    {% include 'partial_views/navbar/html/navbar_partial.html'%}
+    {% endif %}
+
+    <div class="content">
+        <div class="error-message">
+            {% trans "Не удалось найти пользователя" %}
+        </div>
+    </div>
+
+    {% include 'partial_views/footer/footer_partial.html'%}
+    {% include 'partial_views/base_scripts/base_scripts_partial.html'%}
+</body>
+
+</html>

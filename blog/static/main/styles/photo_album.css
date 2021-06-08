@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(233, 245, 255);
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.container-fluid {
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+.content {
+    position: relative;
+    min-height: 600px;
+    max-width: 1310px;
+    margin-left: 154px;
+    margin-right: 154px;
+    background-color: white;
+    margin-top: 90px;
+    border-radius: 4px;
+    margin-bottom: 100px;
+}
+
+.settings-block {
+    background-color: rgb(194 204 204);
+    width: inherit;
+    height: 60px;
+    text-align: center;
+}
+
+.settings-buttons {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.photo-list-container {
+    width: inherit;
+    height: 300px;
+    display: inline-block;
+}
+
+.photo-list {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 1285px;
+    padding-right: 5px;
+    text-align: center;
+    min-height: 270px;
+}
+
+.photo {
+    display: inline-block;
+    height: 220px;
+    width: 210px;
+    margin-right: 18px;
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+.photo img {
+    object-fit: cover;
+    height: inherit;
+    width: 100%;
+}
+
+#add-photo:hover {
+    color: #007bff;;
+}

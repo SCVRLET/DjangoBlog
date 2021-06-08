@@ -1,0 +1,120 @@
+body {
+    height: 3000px;
+    background-color: rgb(233, 245, 255);
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.content {
+    height: 900px;
+    width: 1310px;
+    margin-left: 154px;
+    margin-right: 154px;
+    margin-top: 90px;
+}
+
+.content > div {
+    border-radius: 4px;
+}
+
+#settings-container {
+    margin-top: 2em;
+    width: 100%;
+    min-height: 4em;
+    text-align: center;
+
+}
+
+#settings-block {
+    background-color: white;
+    border-radius: 1em;
+    display: inline-block;
+    width: 70%;
+    min-height: 5em;
+    border: 1px solid rgb(151, 151, 151);
+}
+
+#choose-setting-container {
+    width: 100%;
+    height: 6em;
+    text-align: center;
+}
+
+#settings-variants {
+    display: flex;
+    margin-top: 1em;
+    width: 20%;
+    height: 4em;
+    margin-left: 14%;
+}
+
+.settings-variant {
+    display: flex;
+    height: 3.5em;
+    margin-top: 0.25em;
+    width: 3.5em;
+    margin-left: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    color: #6b6b6b;
+}
+
+.settings-variant:hover {
+    margin-top: 0;
+    color: mediumpurple;
+}
+
+#profile-settings-variant {
+    margin-top: 0;
+    color: mediumpurple;
+}
+
+.settings-change-block {
+    display: none;
+}
+
+#settings-options {
+    display: inline-block;
+    width: 90%;
+    min-height: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.settings-option{
+    display: inline-block;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    border-bottom: 2px solid mediumpurple;
+    min-height: 3em;
+    width: 86%;
+    cursor: pointer;
+}
+
+.settings-option-info {
+    margin-top: 0.75em;
+}
+
+.settings-option-descr {
+    display: inline-flex;
+    margin-right: 2em;
+    margin-left: 2em;
+    font-size: 16px;
+    font-size: 1vw;
+}
+
+.settings-option-descr.label{
+    width: 10%;
+    display: flex;
+}
+.settings-option-descr.description{
+    width: 40%;
+}
+
+.settings-option-descr.right-control{
+    width: 12%;
+}
+
+#security-settings-container {
+    display: none;
+}

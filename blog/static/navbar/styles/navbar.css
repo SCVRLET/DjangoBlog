@@ -1,0 +1,9 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+}
+
+.container-fluid {
+    margin-right: 120px;
+    margin-left: 120px;
+}

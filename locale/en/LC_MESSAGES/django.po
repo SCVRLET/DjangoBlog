@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 17:07+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\authentication\activate_failed.html:2
+msgid "С вашей ссылкой что-то не так..."
+msgstr "Something is wrong with your link..."
+
+#: .\templates\errors\post_not_found.html:11
+msgid "Пост не найден"
+msgstr "Post not found"
+
+#: .\templates\errors\post_not_found.html:37
+msgid "Не удалось найти пост"
+msgstr "Cant find post"
+
+#: .\templates\errors\user_not_found.html:9
+#, fuzzy
+#| msgid "Найти пользователей"
+msgid "Пользователь не найден"
+msgstr "Find users"
+
+#: .\templates\errors\user_not_found.html:37
+#, fuzzy
+#| msgid "Найти пользователей"
+msgid "Не удалось найти пользователя"
+msgstr "Find users"
+
+#: .\templates\login\index.html:14
+msgid "Вход"
+msgstr "LogIn"
+
+#: .\templates\login\index.html:20
+msgid "Нет аккаунта?"
+msgstr "Do not have an account?"
+
+#: .\templates\login\index.html:21
+msgid "создать"
+msgstr "create"
+
+#: .\templates\login\index.html:58 .\templates\login\register.html:26
+#: .\templates\partial_views\navbar\html\navbar_partial.html:25
+#, fuzzy
+#| msgid "Выйти"
+msgid "Войти"
+msgstr "Logout"
+
+#: .\templates\login\register.html:19
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\templates\login\register.html:45
+msgid "Зарегистрироваться"
+msgstr "Register"
+
+#: .\templates\main\easter_egg.html:9
+msgid "Спасибо, что используете мое приложение! ;)"
+msgstr "Thanks for using my app ;)"
+
+#: .\templates\main\find_users.html:8
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:23
+msgid "Найти пользователей"
+msgstr "Find users"
+
+#: .\templates\main\photo_album.html:9 .\templates\main\profile.html:57
+#, fuzzy
+#| msgid "Мой профиль"
+msgid "Фотографии"
+msgstr "My profile"
+
+#: .\templates\main\photo_album.html:37
+msgid "Здесь пока нет фотографий"
+msgstr "There are no photos yet"
+
+#: .\templates\main\photo_album.html:56
+msgid "Добавить фото"
+msgstr "Add photo"
+
+#: .\templates\main\photo_album.html:67
+msgid "Продолжить"
+msgstr "Submit"
+
+#: .\templates\main\profile.html:35 .\templates\settings\settings.html:54
+#: .\templates\settings\settings.html:91
+#: .\templates\settings\settings.html:121
+#: .\templates\settings\settings.html:140
+#: .\templates\settings\settings.html:156
+msgid "Изменить"
+msgstr "Change"
+
+#: .\templates\main\profile.html:51
+msgid "Присоединился"
+msgstr "Joined"
+
+#: .\templates\main\profile.html:91
+#, fuzzy
+#| msgid "создать"
+msgid "Создать"
+msgstr "create"
+
+#: .\templates\partial_views\footer\footer_partial.html:100
+msgid "Просто обычный футер, ничего особенного..."
+msgstr "Just a common footer, nothing special..."
+
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:14
+#: .\templates\partial_views\navbar\html\navbar_partial.html:14
+msgid "Мой профиль"
+msgstr "My profile"
+
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:17
+msgid "Мой альбом"
+msgstr "My album"
+
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:20
+msgid "Настройки"
+msgstr "Settings"
+
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:26
+#: .\templates\partial_views\navbar\html\navbar_partial.html:20
+msgid "Недоступно"
+msgstr "Disabled"
+
+#: .\templates\partial_views\navbar\html\navbar_for_logged_partial.html:31
+msgid "Выйти"
+msgstr "Logout"
+
+#: .\templates\partial_views\navbar\html\navbar_partial.html:17
+#, fuzzy
+#| msgid "Найти пользователей"
+msgid "Пользователи"
+msgstr "Find users"
+
+#: .\templates\settings\settings.html:48
+msgid "Имя"
+msgstr "Name"
+
+#: .\templates\settings\settings.html:85
+msgid "Аватар"
+msgstr "Avatar"
+
+#: .\templates\settings\settings.html:101
+msgid "Изменить язык"
+msgstr "Change language"
+
+#: .\templates\settings\settings.html:134
+#, fuzzy
+#| msgid "Мой профиль"
+msgid "Пароль"
+msgstr "My profile"
+
+#: .\templates\settings\settings.html:150
+msgid "Почта"
+msgstr "E-mail"
+
+#~ msgid "My profile"
+#~ msgstr "Мой профиль"
